@@ -1,81 +1,76 @@
-0. Where am I?
+0. My name is Betty
 mandatory
-Write a script that prints the absolute path name of the current working directory.
+Create a script that switches the current user to the user betty.
 
-1. What’s in there?
+You should use exactly 8 characters for your command (+1 character for the new line)
+You can assume that the user betty will exist when we will run your script
+
+1. Who am I
 mandatory
-Display the contents list of your current directory.
-
-2. There is no place like home
+Write a script that prints the effective username of the current user.
+    
+2. Groups
 mandatory
-Write a script that changes the working directory to the user’s home directory.
-
-You are not allowed to use any shell variables
-
-3. The long format
-mandatory
-Display current directory contents in a long format
-
-4. Hidden files
-mandatory
-Display current directory contents, including hidden files (starting with .). Use the long format.
-
-5. I love numbers
-mandatory
-Display current directory contents.
-
-Long format
-with user and group IDs displayed numerically
-And hidden files (starting with .)
-
-6. Welcome
-mandatory
-Create a script that creates a directory named my_first_directory in the /tmp/ directory.
-
-
-7. Betty in my first directory
-mandatory
-Move the file betty from /tmp/ to /tmp/my_first_directory.
-
-
-8. Bye bye Betty
-mandatory
-Delete the file betty.
-
-The file betty is in /tmp/my_first_directory
-
-
-9. Bye bye My first directory
-mandatory
-Delete the directory my_first_directory that is in the /tmp directory.
+Write a script that prints all the groups the current user is part of.
 
     
-10. Back to the future
+3. New owner
 mandatory
-
-Write a script that changes the working directory to the previous one.
+Write a script that changes the owner of the file hello to the user betty.
 
     
-11. Lists
+4. Empty!
 mandatory
-
-Write a script that lists all files (even ones with names beginning with a period character, which are normally hidden) in the current directory and the parent of the working directory and the /boot directory (in this order), in long format.
-
-
-12. File type
-mandatory
-Write a script that prints the type of the file named iamafile. The file iamafile will be in the /tmp directory when we will run your script.
+Write a script that creates an empty file called hello.
 
     
-13. We are symbols, and inhabit symbols
+5. Execute
 mandatory
-
-Create a symbolic link to /bin/ls, named __ls__. The symbolic link should be created in the current working directory.
+Write a script that adds execute permission to the owner of the file hello.
 
     
-14. Copy HTML files
+6. Multiple permissions
+mandatory
+Write a script that adds execute permission to the owner and the group owner, and read permission to other users, to the file hello.
+
+    
+7. Everybody!
+mandatory
+Write a script that adds execution permission to the owner, the group owner and the other users, to the file hello
+
+    
+8. James Bond
+mandatory
+Write a script that sets the permission to the file hello as follows:
+
+
+    
+9. John Doe
 mandatory
 
-Create a script that copies all the HTML files from the current working directory to the parent of the working directory, but only copy files that did not exist in the parent of the working directory or were newer than the versions in the parent of the working directory.
+Write a script that sets the mode of the file hello to this:
 
-You can consider that all HTML files have the extension .html
+    
+10. Look in the mirror
+mandatory
+Write a script that sets the mode of the file hello the same as olleh’s mode.
+
+    
+11. Directories
+mandatory
+
+Create a script that adds execute permission to all subdirectories of the current directory for the owner, the group owner and all other users.
+
+Regular files should not be changed.
+
+    
+12. More directories
+mandatory
+Create a script that creates a directory called my_dir with permissions 751 in the working directory.
+
+    
+13. Change group
+mandatory
+Write a script that changes the group owner to school for the file hello
+
+The file hello will be in the working directory
