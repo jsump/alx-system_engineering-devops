@@ -4,10 +4,11 @@
 hour=0
 while [ $hour -le 12 ]
 do
+	echo "hour: $hour"
 	minute=0
 	while [ $minute -lt 60 ]
 	do
-		echo "$hour:$minute"
+		echo "$minute"
 		minute=$((minute + 1))
 	done
 	hour=$((hour + 1))
