@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This Bash script displays a list of currently runnign processes by: showing all processes for all users including those who might not have a TTY(teletype terminals), display in a user oriented format, and show process hierarchy.
+
+ps -ef --forest
