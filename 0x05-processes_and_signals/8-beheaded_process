@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This Bash script stops the indefinite printing of "To ininity and beyond"
+
+pid=$(pgrep -f "7-highlander")
+if [ -z "$pid" ]; then
+	exit 1
+fi
+kill $pid
