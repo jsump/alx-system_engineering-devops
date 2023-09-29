@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This Bash script stops the indefinite display of "TO ininity and beyond"
+
+pkill -f "7-highlander"
