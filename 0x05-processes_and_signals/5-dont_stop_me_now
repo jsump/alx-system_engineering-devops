@@ -2,6 +2,7 @@
 # This Bash script stops the indefinite printing of "To ininity and beyond"
 
 pid=$(pgrep -f "4-to_infinity_and_beyond")
-if [[ -n "$pid" ]]; then
-	kill -SIGINT "$pid"
+if [ -z "$pid" ]; then
+	exit 1
 fi
+kill "$pid"
