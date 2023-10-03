@@ -2,7 +2,7 @@
 
 input = ARGV[0]
 
-pattern = /hbt{2,5}n/
+pattern = /^hb(t{2,5})n$/
 
 matches = input.scan(pattern).join
 
