@@ -4,6 +4,6 @@ input = ARGV[0]
 
 pattern = /^h.n$/
 
-if input =~ pattern
-  puts input
-end
+matches = input.scan(pattern).join
+
+puts matches
