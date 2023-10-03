@@ -2,7 +2,7 @@
 
 input = ARGV[0]
 
-pattern = /^hbt?n$/
+pattern = /^hb(t{1,})n$/
 
 if input =~ pattern
   puts input
