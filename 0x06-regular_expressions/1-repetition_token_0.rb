@@ -2,7 +2,7 @@
 
 input = ARGV[0]
 
-pattern = //
+pattern = /[hbtn]/
 
 matches = input.scan(pattern).join
 
