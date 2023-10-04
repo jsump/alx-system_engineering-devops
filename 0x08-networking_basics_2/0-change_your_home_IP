@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# This Bash script configures an Ubuntu server withthe requirements: localhost resolves to 127.0.0.2 and facebook.com resolves to 8.8.8.8
+
+if [[ $EUID -ne 0 ]]; then
+	echo "This script must be run as root"
+	exit 1
+fi
+
+localhost_mapping="127.0.0.2 localhost"
+facebook_mapping="8.8.8.8 facebook.com"
+
+cp /etc/hosts ~/hosts.new
+
+grep -q "^127.0.0.2[[:space:]]localhost$" ~/hosts.new && sed -i
+"s/^127.0.0.2[[:space:]]localhost$/$localhost_mapping/" ~/hosts.new || echo "$localhost_mapping" >> ~/hosts.new
+
+grep -q "^8.8.8.8[[:space:]]facebook.com$" ~/hosts.new && sed -i
+"s/^8.8.8.8[[:space:]]facebook.com$/$facebook_mapping/" ~/hosts.new || echo "$facebook_mapping" >> ~/hosts.new
+
+cp -f ~/hosts.new /etc/hosts
+
+rm ~/hosts.new
