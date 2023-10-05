@@ -1,8 +1,4 @@
 #!/usr/bin/env bash
 # This Bash script displays all the active IPv$ IPs on the machine it's executed on.
 
-ifconfig_output=$(ifconfig)
-
-ipv4_addresses=$(echo "$ifconfig_output" | grp -oE 'inet ([0-9]{1,3}\.){3}[0-9]{1,3}' | awk '{print $2}')
-
-echo "$ipv4_addresses"
+hostname -I
