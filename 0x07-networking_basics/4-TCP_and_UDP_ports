@@ -1,10 +1,4 @@
 #!/usr/bin/env bash
 # This Bash script displays listening ports: that only show listening sockets, and shows the PID and name of the program to which the socket belongs.
 
-netstat_output=$(netstat -tlnp)
-
-listening_ports=$(echo "$netsat_output" | awk '/^tcp/ {print $4}')
-pids=$(echo "$netstat_output" | awk '/^tcp/ {print $7}' |cut -d'/' -f1)
-programs=$(echo "$netsat_output" | awk '/^tcp/ {print $7}' |cut -d'/' -f2)
-
-paste <(echo "$listening_ports") <(echo "$pids") <(echo "$programs")
+netstat -tuln
