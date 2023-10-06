@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# this Bash script configures and Ubuntu server
+
+nc -l localhost 98
