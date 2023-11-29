@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# this script configure the client
+Host school
+	Hostname 100.25.31.195
+	User ubuntu
+	IdentityFile ~/.ssh/school
+	PasswordAuthentication no
