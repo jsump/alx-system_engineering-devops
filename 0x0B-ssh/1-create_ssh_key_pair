@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# this script creates an RSA pair
+openssl genrsa -aes256 -passout pass:betty -out school.key 4096
+openssl rsa -in school.key -passin pass:betty -pubout -out school.pub
