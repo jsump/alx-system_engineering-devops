@@ -1,5 +1,5 @@
 # This manifest makes changes to the configuration file
-file { '/home/ubuntu/.ssh/config':
+file { 'etc/ssh/ssh_config':
   ensure  => file,
   content => "
     Host 100.25.31.195
