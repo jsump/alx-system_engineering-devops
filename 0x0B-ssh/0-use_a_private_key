@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+# This scipt connects ot a server through a private jey
 ssh -i ~/.ssh/school ubuntu@100.25.31.195
