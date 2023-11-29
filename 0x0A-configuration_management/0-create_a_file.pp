@@ -1,3 +1,4 @@
+# This is a manifest that creates a file
 file {'/tmp/school':
   ensure  => present,
   mode    => '0744',
