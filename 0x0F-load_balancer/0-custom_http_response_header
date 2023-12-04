@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# This script to configure Nginx HTTP
+sudo apt update # install the nginx server
+sudo apt install nginx -y
+
+# Custom HTTP response header to the Nginx confg
+echo "add_header X-Served-By ubuntu;" | sudo tee -a /etc/nginx/nginx.conf
+
+#restart the server to apply changes
+sudo systemctl restart nginx
