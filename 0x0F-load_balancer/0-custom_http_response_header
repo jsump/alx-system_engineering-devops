@@ -6,7 +6,17 @@ sudo apt install nginx -y
 hostname=$(hostname)
 
 # Custom HTTP response header to the Nginx confg
-echo "add_header X-Served-By $hostname;" | sudo tee -a /etc/nginx/nginx.conf
+sudo bash -c "cat <<EOF > /etc/nginx/conf.d/custom_headers.conf
+server {
+	listen 80 default_server;
+	listen [::]:80 default_server;
+
+	#for other locations
+	location / {
+		add_header X-Served-by $hostname;
+	}
+	}
+EOF"
 
 #restart the server to apply changes
 sudo systemctl restart nginx
