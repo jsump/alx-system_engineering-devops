@@ -7,7 +7,6 @@ returns informations ablout his/her TOTO list progress
 """
 
 
-import urllib
 import requests
 
 
