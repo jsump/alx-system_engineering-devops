@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Install nginx on web-01 server
+sudo apt-get update
+sudo apt-get install nginx -y
+sudo sed-i 's/listen 80 default_server;listen 80;/g' etc/nginx/sites-available/default
+sudo etc/init.d/nginx restart
+ech "Hello World!" | sudo tee /var/www/html/index.html
+curl http://localhost/
