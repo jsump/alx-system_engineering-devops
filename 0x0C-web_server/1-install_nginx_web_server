@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+<<<<<<< HEAD
 # Install nginx on web-01 server
 sudo apt-get update
 sudo apt-get install nginx -y
@@ -6,3 +7,14 @@ sudo sed-i 's/listen 80 default_server;listen 80;/g' etc/nginx/sites-available/d
 sudo etc/init.d/nginx restart
 ech "Hello World!" | sudo tee /var/www/html/index.html
 curl http://localhost/
+=======
+# Install nginx web server
+sudo apt-get update
+sudo apt-get install nginx -y
+
+sudo sed -i 's/80 default_server/80 default_server;/g' etc/nginx/sites-available/default
+
+sudo kill -s HUP "$(cat /var/run/nginx.pid)"
+
+echo "Hello World" | sudo tee /var/www/html/index.html
+>>>>>>> d78c27bd4bf7998684a0a04592cd31869c24ff54
