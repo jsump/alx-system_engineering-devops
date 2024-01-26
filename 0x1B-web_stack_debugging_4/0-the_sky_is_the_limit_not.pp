@@ -2,7 +2,7 @@
 
 # Install nginx
 package { 'nginx':
-  ensure => 'installed',
+  ensure   => 'installed',
 }
 
 # Congigure nginx
